@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	"github.com/Haarish-Ahmad/idempotent-gateway/internal/errors"
+	//"github.com/Haarish-Ahmad/idempotent-gateway/internal/config"
 )
 
 func sendProblem(w http.ResponseWriter, errtype string, title string, status int) {
@@ -17,6 +18,7 @@ func sendProblem(w http.ResponseWriter, errtype string, title string, status int
 }
 
 func main() {
+
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
