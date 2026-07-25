@@ -6,6 +6,8 @@ import(
 	"time"
 )
 
+//----------------------------------------------------------------------------------------------------------------
+
 type Config struct {
 	Port string 
 	RedisAddr string
@@ -23,6 +25,8 @@ func Load() *Config {
 		LockTTL: getEnvDuration("LOCK_TTL", 60*time.Second),
 	}
 }
+
+//----------------------------------------------------------------------------------------------------------------
 
 func getEnv(key string, fallback string) string {
 	if value, exists := os.LookupEnv(key); exists {

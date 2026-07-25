@@ -6,6 +6,8 @@ import (
 	"log"
 )
 
+//----------------------------------------------------------------------------------------------------------------
+
 type ProblemDetail struct{
 	Type string `json:"type"`
 	Title string `json:"title"`
