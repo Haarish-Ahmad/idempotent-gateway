@@ -11,7 +11,7 @@ import(
 type Config struct {
 	Port string 
 	RedisAddr string
-	RedisPasseord string
+	RedisPassword string
 	RedisDB int
 	LockTTL time.Duration
 }
@@ -20,7 +20,7 @@ func Load() *Config {
 	return &Config{
 		Port: getEnv("PORT", ":8080"),
 		RedisAddr: getEnv("REDIS_ADDR", "localhost:6379"),
-		RedisPasseord: getEnv("REDIS_PASSWORD", ""),
+		RedisPassword: getEnv("REDIS_PASSWORD", ""),
 		RedisDB: getEnvInt("REDIS_DB", 0),
 		LockTTL: getEnvDuration("LOCK_TTL", 60*time.Second),
 	}
